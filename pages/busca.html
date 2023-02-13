@@ -1,0 +1,28 @@
+<!--incluindo header com ejs-->
+<%- include('partials/header.html') %>
+<div class = "center">
+    <div class = "mais-lidas" style = "width:100%;text-align:center;">
+        <h1>Busca:</h1> 
+        <br>
+        <h3><%= contagem %> Resultados</h3>
+        <!--loop com ejs para mostrar todas as notícias -->
+        <% for(let i = 0 ; i < posts.length ; i++){ %>
+            <div class = "mais-lida-noticia-single">
+                <img src = "<%= posts[i].imagem %>"/>
+                <div class = "text-mais-lida-single">
+                    <h4><%= posts[i].categoria %></h4>
+                    <p><%- posts[i].Conteudo %></p>
+                    <a href = "<%= posts[i].slug %>">Saiba mais</a>
+                </div>
+            </div>
+        <% } %>
+        <br>
+        <br>
+    </div><!--mais-lidas-->
+</div><!--center-->
+
+
+<!--incluindo o footer com ejs-->
+<%- include('partials/footer.html') %>
+</body>
+</html>

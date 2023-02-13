@@ -1,0 +1,355 @@
+/**classe responsável por retirar o espaçameto padrão do navegador**/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+/**estilização do body, header e footer**/
+body{
+    min-height:100%;
+}
+header{
+    padding: 10px 0;
+    background-color: darkcyan;
+    position: fixed;
+    width:100%;
+    margin-bottom: 50px;
+    z-index:3;
+
+}
+footer{
+    padding: 25px 0;
+    background-color: darkcyan;
+    text-align: center;
+    color:white;
+    font-weight: bolder;
+    margin-top:50px;
+    bottom: 0;
+    position: fixed;
+    width:100%
+}
+nav{
+    background-color:darkcyan;
+    color:white;
+}
+nav ul{
+    display:inline-flex;
+    list-style-type:none;
+
+
+}
+nav ul li{
+    font-size:16px;
+    font-weight: bold;
+    margin:20px 30px;
+    text-transform: uppercase;
+    letter-spacing: 3.0px;
+}
+nav a{
+    text-decoration: none;
+    color:white;
+}
+
+/** classe para centralizar o conteúdo no site dentro de um determinado espaço
+no caso temos um tamanho máximo de 1100px de largura**/
+
+.center{
+    max-width:1280px;
+    margin:0 auto;
+    padding:0 2%;
+    display:flex;
+   
+}
+::placeholder{
+    color:white;
+    opacity:1;
+    font-size: 15px;
+}
+:-ms-input-placeholder{
+    color:white;
+}
+
+/**estilização da div que contém a classe logo**/
+.logo{
+    width:50%;
+    color:white;
+    text-align:left;
+}
+.logo a{
+    color:white;
+    text-decoration:none;
+}
+
+/**estilização do form que é utilizado para pesquisa**/
+.form-busca{
+    width:50%;
+    text-align: right;
+}
+.form-busca form{
+    display:inline-block;
+    position:relative;
+    
+}
+.form-busca i{
+    position:relative;
+    right:4px;
+    top:4px;
+    color:white;
+}
+.form-busca input{
+    color:white;
+    border:0;
+    background-color:darkslategrey;
+    height: 45px;
+    border-radius:20px;
+    padding-left: 50px;
+}
+
+/**estilização da notícia que aparece em destaque maior do que as demais 
+no site **/
+section.noticia-destaque{
+    padding:40px 0;
+}
+.img-destaque{
+    width:100%;
+    position:relative;
+    border-radius: 10px;;
+}
+.img-destaque img{
+    width: 100%;
+    border-radius: 10px;
+}
+.img-destaque h2{
+    font-size:64px;
+    padding:20px 0;
+}
+.img-destaque p{
+    font-weight:lighter;
+    font-size: 16px;
+}
+/** redefine a largura máxima da classe center exclusivamente para
+section.noticia-destaque**/
+section.noticia-destaque > .center{
+    max-width: 960px;
+}
+/**o z-index é usado para fazer o esquema de camadas em que é definido 
+qual componente fica em cima de qual**/
+.titulo-destaque{
+    position:absolute;
+    bottom: 0;
+    left:0;
+    padding:40px;
+    width: 600px;
+    color:white;
+    z-index: 2;
+}
+.titulo-destaque a{
+    text-decoration: none;
+    color:white;
+}
+/** estilização da div translúcida que fica em cima da div que contém a imagem da
+reportagem de destaque**/
+.overlay-destaque{
+    position:absolute;
+    left:0;
+    top:0;
+    border-radius: 10px;
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+
+/** estilização da parte referente ás ùltimas notícias**/
+section.outras-noticias{
+    background-color:lightgray;
+    padding: 30px 20px;
+    text-align :center;
+    flex-wrap:wrap;
+}
+section.outras-noticias h2{
+    font-size: 54px;;
+}
+.ultimas{
+    width:60%;
+    padding:0 15px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.mais-lidas{
+    width:40%;
+    margin-top: 15px;
+    flex-wrap:nowrap;
+}
+.mais-lidas  > h3{
+    background-color:cadetblue;
+    color:white;
+    padding:10px 8px;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.box-ultima-single{
+    text-align: left;
+    width: 48%;
+    margin:2%;
+    max-height: 550px;
+    background-color:aliceblue;
+    padding-bottom:20px;
+    border-radius: 10px;
+}
+.box-ultima-single img{
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.box-ultima-single h3{
+    font-size:16px;
+    color:darkcyan;
+    letter-spacing: 3px;
+    margin:20px 0;
+}
+/** (! important) dá prioridade sobre uma definição ocorrida 
+anteriormente **/
+.box-ultima-single h2{
+    font-size:25px !important;  
+}
+.box-ultima-single p{
+    font-size:16px;
+    color:darkslategrey;
+    margin:20px 0;
+}
+.box-ultima-single a{
+    display:block;
+    width: 150px;
+    height: 50px;
+    text-decoration: none;
+    color:cadetblue;
+    border: 1px solid cadetblue;
+    border: radius 10px;
+    line-height: 50px;
+    text-align: center;
+    font-size:20px;
+    margin:0 75px;
+    
+}
+.box-ultima-single a:hover{
+    background-color: cadetblue;
+    color: white;
+    
+}
+.conteudo-noticia-single{
+    padding-left: 10px;
+    padding-right:10px;
+}
+
+/**estilização da parte referente às notícias mais lidas**/
+.mais-lida-noticia-single{
+    padding:5px 20px;
+    display:flex;
+    text-align: left;
+    border: 1px solid cadetblue;
+    flex-wrap: nowrap;
+}
+.mais-lida-noticia-single img{
+    width:30%;
+    height:80%;
+    margin-top:30px;
+}
+.text-mais-lida-single{
+    margin: 0 20px;
+    width:70%;
+}
+.text-mais-lida-single h4{
+    color:darkcyan;
+    letter-spacing: 3.2px;
+}
+.text-mais-lida-single p{
+        color:darkslategrey;
+        font-size:18px;
+}
+.text-mais-lida-single a{
+    display:block;
+    width: 100px;
+    height: 30px;
+    text-decoration: none;
+    color:cadetblue;
+    border: 1px solid cadetblue;
+    border: radius 10px;
+    line-height: 30px;
+    text-align: center;
+    font-size:12px;
+    margin:20px 0;
+}
+/**parte referente a configuração da responsividadedo site 
+(será trabalhada com mais detalhes futuramente)**/
+@media screen and (max-width:768px){
+    .logo,.form-busca{width:100%}
+    .form-busca{
+        text-align:center;
+        margin-top:10px;
+    }
+    .titulo-destaque h2{
+        font-size:34px;
+        margin:20px 0;
+    }
+    .mais-lidas,.ultimas,.box-ultima-single{width:100%;margin:10px 0;}
+    .ultimas{
+        flex-wrap: wrap;
+    }
+    .mais-lidas{
+        flex-wrap: wrap;
+    }
+    .box-ultima-single{
+        width:100%;
+    }
+    .mais-lida-noticia-single img{
+        width:100%;
+    }
+    .mais-lidas img{
+        width:100%
+    }
+    
+    
+    
+}
+/**parte referente a página que apresenta as notícias de forma única(single.html)**/
+.noticia-single{
+    width:58%;
+    background-color:aliceblue;
+    margin:2%;
+    border-radius:10px;
+    padding:20px;
+}
+.noticia-single h2{
+    color:darkslategrey;
+    font-size: 42px;
+    margin:10px;
+}
+.noticia-single span{
+    color:darkslategray;
+    letter-spacing: 3.2px;
+    text-transform: uppercase;
+    margin:10px;
+    font-weight:bold;
+}
+.noticia-single p{
+    color:gray;
+    font-size:15px;
+    line-height:26px;
+    margin:15px;
+}
+.noticia-single h3{
+    color:darkslategrey;
+    font-size: 33px;
+    margin:10px;
+}
+.noticia-single img{
+    max-width:100%;
+    max-height:70%;
+}
